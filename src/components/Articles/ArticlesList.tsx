@@ -1,29 +1,22 @@
 import {Card, CardDescription, CardHeader, CardTitle} from "@/components/ui/card.tsx";
 import {useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 function ArticlesList() {
     const navigate = useNavigate();
-    const articles = [
-        {
-            title: "Test article",
-            description: "This is a test article",
-            date: "2021-10-10",
-            filename: "testArticle.md"
-        },
-        {
-            title: "Test article 2",
-            description: "This is a test article 2",
-            date: "2021-10-11",
-            filename: "testArticle2.md"
-        }
-    ]
+    const [articles, setArticles] = useState([]);
+
+    useEffect(() => {
+        fetch("/Contents/contentList.json")
+            .then((response) => (response.json()))
+            .then((json) => setArticles(json))
+    }, [articles])
 
     return (
         <div className={"flex flex-col w-full h-[90vh] justify-center items-center"}>
-            <div>Test liste articles</div>
-            {articles.map((article) => {
+            {articles.map((article: { title: String, description: String, date: String, filename: String }) => {
                 return (
-                    <Card className={"hover:cursor-pointer"}
+                    <Card className={"hover:cursor-pointer min-w-96 max-w-96"}
                           onClick={() => (navigate('/article', {state: {filename: article.filename}}))}
                     >
                         <CardHeader>
