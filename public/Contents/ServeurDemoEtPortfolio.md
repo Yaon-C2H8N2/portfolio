@@ -16,3 +16,22 @@ Docker.
 ***
 
 ### Monitoring
+
+Pour la partie monitoring du serveur, un conteneur Prometheus est déployé ainsi qu'un Node Exporter. Un conteneur
+Grafana est également déployé pour visualiser les métriques collectées par Prometheus. (Voir
+la [page publique](https://monitoring.yaon.fr) de monitoring)
+
+***
+
+### Gestion des conteneurs Docker
+
+Un conteneur Portainer est déployé sur le serveur afin de gérer à l'aide d'une interface web les différents conteneurs
+déployés sur le serveur.
+
+***
+
+### Reverse-proxy Nginx
+
+Tous les services hébergés sur le serveur sont exposés via un reverse-proxy Nginx déployé également à l'aide d'un
+conteneur Docker. Ainsi chaque service est accessible via un sous-domaine de [yaon.fr](https://yaon.fr). Cela permet de
+sécuriser chacun des services via HTTPS grâce à un seul et unique certificat SSL.
