@@ -1,7 +1,7 @@
 import {
-    NavigationMenu,
+    NavigationMenu, NavigationMenuContent, NavigationMenuItem,
     NavigationMenuLink,
-    NavigationMenuList,
+    NavigationMenuList, NavigationMenuTrigger,
     navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu.tsx";
 
@@ -16,6 +16,19 @@ function MenuBar(){
                     <NavigationMenuLink href={"/articles"} className={navigationMenuTriggerStyle()}>
                         Articles
                     </NavigationMenuLink>
+                    <NavigationMenuItem>
+                        <NavigationMenuTrigger>Liens</NavigationMenuTrigger>
+                        <NavigationMenuContent className={"min-w-60"}>
+                            <ul className={"flex flex-col"}>
+                                <NavigationMenuLink href={"https://github.com/Yaon-C2H8N2"} target={"_blank"} className={navigationMenuTriggerStyle() + " min-w-[100%]"}>
+                                    Github
+                                </NavigationMenuLink>
+                                <NavigationMenuLink href={"https://www.linkedin.com/in/yaon/"} target={"_blank"} className={navigationMenuTriggerStyle() + " min-w-[100%]"}>
+                                    LinkedIn
+                                </NavigationMenuLink>
+                            </ul>
+                        </NavigationMenuContent>
+                    </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
         </div>

@@ -28,6 +28,9 @@ function Article() {
                         },
                         code(props) {
                             return <code className={"bg-gray-200"}>{props.children}</code>
+                        },
+                        ul(props) {
+                            return <ul className={"list-disc ml-8"}>{props.children}</ul>
                         }
                     }}
                 >
