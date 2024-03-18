@@ -16,5 +16,11 @@
     "description": "Développement de ce portfolio et intégration continue avec les GitHub Actions",
     "date": "2024-03-18",
     "filename": "Portfolio.md"
+  },
+  {
+    "title": "N-Body simulation",
+    "description": "Simulation de N-Body avec MPI en C++ pour la distribution de la charge de calcul sur un cluster",
+    "date": "2024-03-19",
+    "filename": "NBodySimulation.md"
   }
 ]

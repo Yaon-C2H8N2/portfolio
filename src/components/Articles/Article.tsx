@@ -26,8 +26,14 @@ function Article() {
                         h3(props) {
                             return <h3 className={"text-2xl font-bold"}>{props.children}</h3>
                         },
+                        h4(props) {
+                            return <h4 className={"text-xl font-bold"}>{props.children}</h4>
+                        },
+                        pre(props) {
+                            return <pre className={"border-gray-200 border-4 rounded-lg bg-gray-200"}>{props.children}</pre>
+                        },
                         code(props) {
-                            return <code className={"bg-gray-200"}>{props.children}</code>
+                            return <code className={"bg-gray-200 border-4 rounded-lg"}>{props.children}</code>
                         },
                         ul(props) {
                             return <ul className={"list-disc ml-8"}>{props.children}</ul>
