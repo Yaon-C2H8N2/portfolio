@@ -19,12 +19,9 @@ function ArticlesList() {
             .then((json) => setArticles(json))
     }, [])
 
-    console.log("Before sorting: ", articles)
     articles.sort((a: Article, b: Article) => {
-        console.log(Date.parse(b.date) - Date.parse(a.date))
         return Date.parse(b.date) - Date.parse(a.date)
     })
-    console.log("After sorting: ", articles)
 
     return (
         <div className={"flex flex-col w-full h-[90vh] justify-center items-center space-y-5"}>
