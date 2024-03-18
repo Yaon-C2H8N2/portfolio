@@ -9,6 +9,10 @@ Docker.
 
 ### Snoopy + Snoopy Beta
 
+Snoopy est un projet personnel développé pour répondre à un besoin professionnel. Il s'agit d'une application web
+permettant l'édition de bons d'intervention au format PDF. Un article détaillé sur le projet est
+disponible.
+
 Afin d'agir comme un serveur de démo/pre-prod, une instance de Snoopy sur la dernière version stable ainsi qu'une
 instance de Snoopy sur la dernière version beta sont hébergées sur ce serveur. Elles sont déployées et mis à jour via
 Docker.
@@ -18,8 +22,15 @@ Docker.
 ### Monitoring
 
 Pour la partie monitoring du serveur, un conteneur Prometheus est déployé ainsi qu'un Node Exporter. Un conteneur
-Grafana est également déployé pour visualiser les métriques collectées par Prometheus. (Voir
-la [page publique](https://monitoring.yaon.fr) de monitoring)
+Grafana est également déployé pour visualiser les métriques collectées par Prometheus (Voir
+la [page publique](https://monitoring.yaon.fr) de monitoring).
+
+Les dossiers `/host/proc` et `/host/sys` sont montés dans le conteneur du Node Exporter pour collecter les métriques.
+Ces dernières sont ensuite exposées via le port 9100 afin d'être collectées par Prometheus.
+
+Prometheus sert ici uniquement pour collecter les informations et offrir les requêtes permettant de les visualiser.
+Enfin, en paramétrant Grafana pour utiliser Prometheus comme source de données, on peut utiliser les requêtes de
+Prometheus pour visualiser les métriques.
 
 ***
 
