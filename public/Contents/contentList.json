@@ -10,5 +10,11 @@
     "description": "Mise en place d'un serveur hébergeant des démos d'app web et ce portfolio",
     "date": "2024-03-16",
     "filename": "ServeurDemoEtPortfolio.md"
+  },
+  {
+    "title": "Portfolio",
+    "description": "Développement de ce portfolio et intégration continue avec les GitHub Actions",
+    "date": "2024-03-18",
+    "filename": "Portfolio.md"
   }
 ]
