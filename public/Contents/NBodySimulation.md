@@ -92,7 +92,7 @@ void initBodies(std::vector<Body>& bodies) {
 }
 ```
 
-*Fonction initialisant le système stellaire simulé*
+> Fonction initialisant le système stellaire simulé
 
 Structure Body :
 
@@ -175,7 +175,7 @@ void calculateForces(
 }
 ```
 
-Fonction de calcul des forces
+> Fonction de calcul des forces
 
 #### Méthode updatePositions
 
@@ -203,7 +203,7 @@ void updatePositions(
 }
 ```
 
-Mise à jour de la position des corps
+> Mise à jour de la position des corps
 
 #### Initialisation de MPI
 
