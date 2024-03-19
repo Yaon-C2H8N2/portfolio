@@ -5,6 +5,8 @@ Portfolio au format web présentant mon CV et mes projets personnels. Les diffé
 de [react-markdown](https://github.com/remarkjs/react-markdown). L'intérêt de cette méthode est de pouvoir écrire les
 articles sans avoir à redéployer l'application à chaque modification.
 
+Il est hébergé sur [yaon.fr](https://www.yaon.fr)
+
 ***
 
 ### CI/CD
