@@ -83,7 +83,7 @@ function Home() {
                     <h1 className={"text-4xl font-bold mb-2"}>Yoan Dusoleil</h1>
                     <div>Développeur Full Stack</div>
                     <div>Dijon, France</div>
-                    <div className={"flex inline-flex gap-1"}>
+                    <div className={"inline-flex gap-1"}>
                         <a href={"mailto:y.dusoleil@outlook.com"}>
                             <Button variant={"outline"} size={"icon"}>
                                 <Mail className={"w-6 h-6"}/>
