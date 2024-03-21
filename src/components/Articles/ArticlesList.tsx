@@ -24,7 +24,7 @@ function ArticlesList() {
     })
 
     return (
-        <div className={"flex flex-col w-full h-[90vh] justify-center items-center space-y-5"}>
+        <div className={"flex flex-col w-full min-h-[90vh] justify-center items-center gap-5"}>
             {articles.map((article: Article) => {
                 return (
                     <Card className={"hover:cursor-pointer hover:shadow-primary min-w-96 max-w-96"}
@@ -33,7 +33,7 @@ function ArticlesList() {
                     >
                         <CardHeader>
                             <CardTitle>{article.title}</CardTitle>
-                            <CardDescription>{article.description}</CardDescription>
+                            <CardDescription className={"max-h-[9vh]"}>{article.description}</CardDescription>
                         </CardHeader>
                     </Card>
                 )

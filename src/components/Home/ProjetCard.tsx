@@ -37,7 +37,7 @@ function ProjetCard(props: ProjetCardProps) {
                     </div>
                 </div>
                 <div className={"flex flex-inline justify-center"}>
-                    <div className={"text-xs min-w-[15vh]"}>{props.projet.periode}</div>
+                    <div className={"text-xs min-w-[15vh] text-center"}>{props.projet.periode}</div>
                 </div>
             </Card>
         </>
