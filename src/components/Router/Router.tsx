@@ -15,7 +15,7 @@ function Router() {
             >
                 <Route path={""} element={<Home/>}/>
                 <Route path={"articles"} element={<ArticlesList/>}/>
-                <Route path={"article"} element={<Article/>}/>
+                <Route path={"article/:filename"} element={<Article/>}/>
             </Route>
         </Routes>
     );

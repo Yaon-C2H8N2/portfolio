@@ -27,9 +27,10 @@ function ArticlesList() {
         <div className={"flex flex-col w-full min-h-[90vh] justify-center items-center gap-5"}>
             {articles.map((article: Article) => {
                 return (
-                    <Card className={"hover:cursor-pointer hover:shadow-primary min-w-96 max-w-96"}
-                          onClick={() => (navigate('/article', {state: {filename: article.filename}}))}
-                          key={article.filename}
+                    <Card
+                        className={"hover:cursor-pointer hover:shadow-primary w-[45vh] h-[18vh] flex flex-col justify-center"}
+                        onClick={() => (navigate('/article/' + article.filename.replace(".md", "")))}
+                        key={article.filename}
                     >
                         <CardHeader>
                             <CardTitle>{article.title}</CardTitle>

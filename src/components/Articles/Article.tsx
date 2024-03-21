@@ -1,16 +1,17 @@
 import Markdown from "react-markdown";
 import {useEffect, useState} from "react";
-import {useLocation} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 function Article() {
     const [content, setContent] = useState("");
-    const {state} = useLocation();
+    const {filename} = useParams();
 
     useEffect(() => {
-        fetch("/Contents/" + state.filename)
+        fetch("/Contents/" + filename + ".md")
             .then((response) => (response.text()))
             .then((text) => setContent(text))
-    }, [state.filename])
+            .then(() => window.scrollTo(0, 0))
+    }, [filename])
 
     return (
         <div className={"flex min-w-full justify-center items-center min-h-[90vh]"}>
@@ -47,7 +48,8 @@ function Article() {
                             return <p className={"text-justify"}>{props.children}</p>
                         },
                         a(props) {
-                            return <a href={props.href} target={"_blank"} className={"text-blue-500"}>{props.children}</a>
+                            return <a href={props.href} target={"_blank"}
+                                      className={"text-blue-500"}>{props.children}</a>
                         },
                         blockquote(props) {
                             return <blockquote
