@@ -9,7 +9,7 @@ Docker.
 
 ### Snoopy + Snoopy Beta
 
-Snoopy est un projet personnel développé pour répondre à un besoin professionnel. Il s'agit d'une application web
+[Snoopy](/article/Snoopy) est un projet personnel développé pour répondre à un besoin professionnel. Il s'agit d'une application web
 permettant l'édition de bons d'intervention au format PDF. Un article détaillé sur le projet est
 disponible.
 
@@ -37,7 +37,8 @@ Prometheus pour visualiser les métriques.
 ### Gestion des conteneurs Docker
 
 Un conteneur Portainer est déployé sur le serveur afin de gérer à l'aide d'une interface web les différents conteneurs
-déployés sur le serveur.
+déployés sur le serveur. L'utilisation de Portainer permet de facilement manipuler les conteneurs et les images pour
+rapidement déployer, mettre à jour ou supprimer des services.
 
 ***
 

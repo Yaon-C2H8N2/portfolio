@@ -1,7 +1,7 @@
 # Portfolio
 
-Portfolio au format web présentant mon CV et mes projets personnels. Les différents articles concernant les projet sont
-écris au format Markdown et sont ensuite convertis en HTML à l'aide
+Portfolio au format web, présentant mon CV et mes projets personnels, dont le code source est disponible sur [Github]().
+Les différents articles concernant les projet sont écris au format Markdown et sont ensuite convertis en HTML à l'aide
 de [react-markdown](https://github.com/remarkjs/react-markdown). L'intérêt de cette méthode est de pouvoir écrire les
 articles sans avoir à redéployer l'application à chaque modification.
 
@@ -11,6 +11,10 @@ articles sans avoir à redéployer l'application à chaque modification.
 
 À l'aide des Github actions, à chaque push sur la branche `main`, le contenu statique (articles au format Markdown) est
 automatiquement copié sur le serveur sans que le site ne soit redéployé.
+
+Le site est également déployé avec Docker. L'image est re-build à chaque push sur la branche `main` et est ensuite
+déployée sur le Github Registry. Il peut ainsi facilement être déployé sur
+le [serveur d'hébergement](/article/ServeurDemoEtPortfolio).
 
 ***
 
