@@ -1,7 +1,8 @@
 # Portfolio
 
-Portfolio au format web, présentant mon CV et mes projets personnels, dont le code source est disponible sur [Github]().
-Les différents articles concernant les projet sont écris au format Markdown et sont ensuite convertis en HTML à l'aide
+Portfolio au format web, présentant mon CV et mes projets personnels, dont le code source est disponible
+sur [Github](https://github.com/Yaon-C2H8N2/portfolio). Les différents articles concernant les projet sont écris au
+format Markdown et sont ensuite convertis en HTML à l'aide
 de [react-markdown](https://github.com/remarkjs/react-markdown). L'intérêt de cette méthode est de pouvoir écrire les
 articles sans avoir à redéployer l'application à chaque modification.
 
