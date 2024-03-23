@@ -15,7 +15,7 @@ function Article() {
 
     return (
         <div className={"flex min-w-full justify-center items-center min-h-[90vh]"}>
-            <div className={"flex flex-col max-w-[60%] min-w-[50vh] space-y-2.5"}>
+            <div className={"flex flex-col max-w-[60%] min-w-[45vh] space-y-2.5"}>
                 <Markdown
                     components={{
                         h1(props) {

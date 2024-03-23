@@ -63,7 +63,7 @@ function Home() {
         {
             nom: "N-Body Simulation",
             periode: "10/2023 - 12/2023",
-            tags: ["distributed-systems", "C++", "MPI", "OpenMPI", "OpenGL", "NBody-Simulation"],
+            tags: ["Calcul distribué", "C++", "MPI", "OpenMPI", "OpenGL", "NBody-Simulation"],
             description: "Simulation à N-Corps développée en C++/MPI. Capable de gérer plus de 100k corps sur une douzaine de nœuds.",
             lien: "https://github.com/Yaon-C2H8N2/Projet-Systemes-Distribues"
         },
@@ -85,7 +85,7 @@ function Home() {
 
     return (
         <div className={"flex w-full justify-center"}>
-            <div className={"flex flex-col max-w-[60%] min-w-[50vh] space-y-5"}>
+            <div className={"flex flex-col max-w-[60%] min-w-[45vh] space-y-5"}>
                 <div className={"flex flex-col gap-0.5"}>
                     <h1 className={"text-4xl font-bold mb-2"}>Yoan Dusoleil</h1>
                     <div>Développeur Full Stack</div>
@@ -175,7 +175,7 @@ function Home() {
                     <div className={"flex flex-wrap gap-2 justify-center"}>
                         {projets.map((projet: Projet) => {
                             return (
-                                <div key={projet.nom} className={"max-w-[32%] min-w-[24vh] min-h-[30vh]"}>
+                                <div key={projet.nom} className={"max-w-[32%] min-w-[21vh] min-h-[30vh]"}>
                                     <ProjetCard projet={projet}/>
                                 </div>
                             )
