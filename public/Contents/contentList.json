@@ -1,26 +1,32 @@
 [
   {
     "title": "Snoopy",
-    "description": "Application web de génération de bons d'intervention",
+    "description": "Application web de génération de bons d'intervention.",
     "date": "2024-03-15",
     "filename": "Snoopy.md"
   },
   {
     "title": "Serveur de demo + portfolio",
-    "description": "Mise en place d'un serveur hébergeant des démos d'app web et ce portfolio",
+    "description": "Mise en place d'un serveur hébergeant des démos d'app web et ce portfolio.",
     "date": "2024-03-16",
     "filename": "ServeurDemoEtPortfolio.md"
   },
   {
     "title": "Portfolio",
-    "description": "Développement de ce portfolio et intégration continue avec les GitHub Actions",
+    "description": "Développement de ce portfolio et intégration continue avec les GitHub Actions.",
     "date": "2024-03-18",
     "filename": "Portfolio.md"
   },
   {
     "title": "N-Body simulation",
-    "description": "Simulation de N-Body avec MPI en C++ pour la distribution de la charge de calcul sur un cluster",
+    "description": "Simulation de N-Body avec MPI en C++ pour la distribution de la charge de calcul sur un cluster.",
     "date": "2024-03-19",
     "filename": "NBodySimulation.md"
+  },
+  {
+    "title": "Analyse de données Lichess.org",
+    "description": "Programme d'extraction et d'analyse de données à partir de la base de données publique de Lichess.org.",
+    "date": "2024-03-23",
+    "filename": "LichessDataAnalysis.md"
   }
 ]
