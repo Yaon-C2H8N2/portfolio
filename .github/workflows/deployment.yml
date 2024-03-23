@@ -21,3 +21,17 @@ jobs:
           target: ${{ secrets.SSH_TARGET }}
           strip_components: 2
           overwrite: true
+
+  docker-deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Building Docker image
+        run: |
+          docker build . --tag ghcr.io/${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+
+      - name: Pushing Docker image
+        run: |
+          docker login ghcr.io -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.GITHUB_TOKEN }}
+          docker push ghcr.io/${{ secrets.DOCKER_USERNAME }}/portfolio:latest
