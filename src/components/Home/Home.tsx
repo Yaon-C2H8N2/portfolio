@@ -73,6 +73,13 @@ function Home() {
             tags: ["TypeScript", "Angular", "TailwindCSS", "GitHub Actions", "CI/CD"],
             description: "Todo list en Angular sans librairies de composants ni Backend. Tests Lint et CI/CD avec GitHub Actions.",
             lien: "https://github.com/Yaon-C2H8N2/Projet-CWA"
+        },
+        {
+            nom: "Lichess Data Analysis",
+            periode: "03/2022 - 04/2022",
+            tags: ["Java", "Concurrency", "Threads", "Sockets"],
+            description: "Projet universitaire de programmation concurrente. Analyse de données de parties d'échecs en Java. 10+To de données.",
+            lien: "https://github.com/Yaon-C2H8N2/info4b_project"
         }
     ];
 
@@ -115,26 +122,26 @@ function Home() {
                 <div>
                     <h2 className={"text-3xl font-bold mb-2"}>Expériences</h2>
                     <div className={"flex flex-col gap-1"}>
-                    {experiences.map((experience: Experience) => {
-                        return (
-                            <div key={experience.entreprise}>
-                                <div className={"flex justify-between"}>
-                                    <div className={"flex flex-wrap gap-1 items-center"}>
-                                        <h3 className={"text-xl font-bold"}>{experience.entreprise}</h3>
-                                        {experience.tags.map((tag: string) => {
-                                            return (
-                                                <Badge key={"experience-" + tag} className={"h-5"}
-                                                       variant={"secondary"}>{tag}</Badge>
-                                            )
-                                        })}
+                        {experiences.map((experience: Experience) => {
+                            return (
+                                <div key={experience.entreprise}>
+                                    <div className={"flex justify-between"}>
+                                        <div className={"flex flex-wrap gap-1 items-center"}>
+                                            <h3 className={"text-xl font-bold"}>{experience.entreprise}</h3>
+                                            {experience.tags.map((tag: string) => {
+                                                return (
+                                                    <Badge key={"experience-" + tag} className={"h-5"}
+                                                           variant={"secondary"}>{tag}</Badge>
+                                                )
+                                            })}
+                                        </div>
+                                        <div className={"min-w-[23vh] text-right"}>{experience.periode}</div>
                                     </div>
-                                    <div className={"min-w-[23vh] text-right"}>{experience.periode}</div>
+                                    <div>{experience.poste}</div>
+                                    <div className={"text-justify"}>{experience.description}</div>
                                 </div>
-                                <div>{experience.poste}</div>
-                                <div className={"text-justify"}>{experience.description}</div>
-                            </div>
-                        )
-                    })}
+                            )
+                        })}
                     </div>
                 </div>
                 <div>
