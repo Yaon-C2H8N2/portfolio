@@ -24,21 +24,23 @@ function ArticlesList() {
     })
 
     return (
-        <div className={"flex flex-col w-full min-h-[90vh] justify-center items-center gap-5"}>
-            {articles.map((article: Article) => {
-                return (
-                    <Card
-                        className={"hover:cursor-pointer hover:shadow-primary w-[45vh] h-[18vh] flex flex-col justify-center"}
-                        onClick={() => (navigate('/article/' + article.filename.replace(".md", "")))}
-                        key={article.filename}
-                    >
-                        <CardHeader>
-                            <CardTitle>{article.title}</CardTitle>
-                            <CardDescription className={"max-h-[9vh]"}>{article.description}</CardDescription>
-                        </CardHeader>
-                    </Card>
-                )
-            })}
+        <div className={"flex min-h-[90vh] justify-center items-center"}>
+            <div className={"flex flex-wrap w-full max-w-[95vh] justify-center items-center gap-5"}>
+                {articles.map((article: Article) => {
+                    return (
+                        <Card
+                            className={"hover:cursor-pointer hover:shadow-primary w-[45vh] h-[18vh] flex flex-col justify-center"}
+                            onClick={() => (navigate('/article/' + article.filename.replace(".md", "")))}
+                            key={article.filename}
+                        >
+                            <CardHeader>
+                                <CardTitle>{article.title}</CardTitle>
+                                <CardDescription className={"max-h-[9vh]"}>{article.description}</CardDescription>
+                            </CardHeader>
+                        </Card>
+                    )
+                })}
+            </div>
         </div>
     );
 }
