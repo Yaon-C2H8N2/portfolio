@@ -31,7 +31,7 @@ function ProjetCard(props: ProjetCardProps) {
                     <div className={"flex flex-wrap gap-1"}>
                         {props.projet.tags.map((tag: string) => {
                             return (
-                                <Badge key={tag + "-tag-" + props.projet.nom} className={"h-5 overflow-hidden"}>{tag}</Badge>
+                                <Badge key={tag + "-tag-" + props.projet.nom} className={"h-5 text-nowrap"}>{tag}</Badge>
                             )
                         })}
                     </div>

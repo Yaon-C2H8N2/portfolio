@@ -56,7 +56,7 @@ function Home() {
         {
             nom: "Snoopy",
             periode: "12/2023 - 03/2024",
-            tags: ["Java (Spring Boot)", "React", "PostgreSQL", "Apache POI", "Docker", "CI/CD"],
+            tags: ["Java", "Spring Boot", "React", "PostgreSQL", "Apache POI", "Docker", "CI/CD"],
             description: "Application web en React avec un backend en Spring-Boot pour envoyer des factures pdf à des clients. Déployé avec Docker.",
             lien: "https://github.com/Yaon-C2H8N2/Snoopy"
         },
