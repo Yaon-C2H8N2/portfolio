@@ -1,6 +1,13 @@
 import Markdown from "react-markdown";
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+import {Light as SyntaxHighlighter} from "react-syntax-highlighter";
+import {githubGist} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import c from "react-syntax-highlighter/dist/esm/languages/hljs/c";
+import javascript from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
+import java from "react-syntax-highlighter/dist/esm/languages/hljs/java";
+import typescript from "react-syntax-highlighter/dist/esm/languages/hljs/typescript";
+import sql from "react-syntax-highlighter/dist/esm/languages/hljs/sql";
 
 function Article() {
     const [content, setContent] = useState("");
@@ -10,7 +17,12 @@ function Article() {
         fetch("/Contents/" + filename + ".md")
             .then((response) => (response.text()))
             .then((text) => setContent(text))
-            .then(() => window.scrollTo(0, 0))
+            .then(() => window.scrollTo(0, 0));
+        SyntaxHighlighter.registerLanguage('C', c);
+        SyntaxHighlighter.registerLanguage('JavaScript', javascript);
+        SyntaxHighlighter.registerLanguage('Java', java);
+        SyntaxHighlighter.registerLanguage('TypeScript', typescript);
+        SyntaxHighlighter.registerLanguage('SQL', sql);
     }, [filename])
 
     return (
@@ -31,10 +43,21 @@ function Article() {
                             return <h4 className={"text-xl font-bold"}>{props.children}</h4>
                         },
                         pre(props) {
+                            // @ts-expect-error je vais me coller une balle jpp
+                            const match = /language-(\w+)/.exec(props.children.props.className || '')
+
+                            // return (
+                            //     <div className={"overflow-y-auto"}>
+                            //         <pre
+                            //             className={"border-gray-200 border-4 pl-3 rounded-lg bg-gray-200 min-w-fit"}>{props.children}</pre>
+                            //     </div>
+                            // )
                             return (
-                                <div className={"overflow-y-auto"}>
-                                    <pre
-                                        className={"border-gray-200 border-4 pl-3 rounded-lg bg-gray-200 min-w-fit"}>{props.children}</pre>
+                                <div className={"overflow-y-auto border-gray-200 border-4 pl-3 rounded-lg bg-gray-200"}>
+                                    <SyntaxHighlighter customStyle={{backgroundColor: "rgb(229 231 235)"}} language={match ? match[1] : 'text'} style={githubGist}>
+                                        {// @ts-expect-error je vais me coller une balle jpp
+                                            (props.children).props.children as string}
+                                    </SyntaxHighlighter>
                                 </div>
                             )
                         },
