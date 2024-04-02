@@ -8,19 +8,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      import * as c from "react-syntax-highlighter/dist/esm/languages/hljs/c";
-      import * as javascript from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
-      import * as java from "react-syntax-highlighter/dist/esm/languages/hljs/java";
-      import * as typescript from "react-syntax-highlighter/dist/esm/languages/hljs/typescript";
-      import * as sql from "react-syntax-highlighter/dist/esm/languages/hljs/sql";
-
-      SyntaxHighlighter.registerLanguage('C', c);
-      SyntaxHighlighter.registerLanguage('JavaScript', javascript);
-      SyntaxHighlighter.registerLanguage('Java', java);
-      SyntaxHighlighter.registerLanguage('TypeScript', typescript);
-      SyntaxHighlighter.registerLanguage('SQL', sql);
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
