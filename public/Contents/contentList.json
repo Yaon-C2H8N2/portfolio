@@ -28,5 +28,11 @@
     "description": "Programme d'extraction et d'analyse de données à partir de la base de données publique de Lichess.org.",
     "date": "2024-03-23",
     "filename": "LichessDataAnalysis.md"
+  },
+  {
+    "title": "Github Actions - Cache",
+    "description": "Utilisation des artifacts de GitHub Actions comme cache pour une action de build en plusieurs étapes.",
+    "date": "2024-04-02",
+    "filename": "GitHubActionsArtifacts.md"
   }
 ]
