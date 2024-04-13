@@ -34,5 +34,11 @@
     "description": "Utilisation des artifacts de GitHub Actions comme cache pour une action de build en plusieurs étapes.",
     "date": "2024-04-02",
     "filename": "GitHubActionsArtifacts.md"
+  },
+  {
+    "title": "Cluster et stockage distribué",
+    "description": "Mise en place d'un cluster avec proxmox et d'un stockage distribué avec Ceph.",
+    "date": "2024-04-13",
+    "filename": "CephCluster.md"
   }
 ]
