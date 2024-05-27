@@ -40,5 +40,11 @@
     "description": "Mise en place d'un cluster avec proxmox et d'un stockage distribué avec Ceph.",
     "date": "2024-04-13",
     "filename": "CephCluster.md"
+  },
+  {
+    "title": "Stockage distribué avec GlusterFS : Chapitre 1",
+    "description": "Présentation de GlusterFS et du projet de mise en place d'un stockage distribué avec une WebUi custom.",
+    "date": "2024-05-27",
+    "filename": "GoGlusterFs.md"
   }
 ]

@@ -54,6 +54,13 @@ function Home() {
 
     const projets: Projet[] = [
         {
+            nom: "go-glusterfs",
+            periode: "05/2024 - 06/2024",
+            tags: ["Go", "GlusterFS", "Wrapper", "CI/CD", "Docker"],
+            description: "Wrapper en Go pour GlusterFS. Tests unitaires et CI/CD avec Docker pour simuler un cluster de test. Réalisé en lien avec glusterfs-webui.",
+            lien: "https://github.com/Yaon-C2H8N2/go-glusterfs"
+        },
+        {
             nom: "Snoopy",
             periode: "12/2023 - 03/2024",
             tags: ["Java", "Spring Boot", "React", "PostgreSQL", "Apache POI", "Docker", "CI/CD"],
@@ -111,10 +118,10 @@ function Home() {
                 <div>
                     <h2 className={"text-3xl font-bold mb-2"}>À propos</h2>
                     <div className={"text-justify"}>
-                        Etudiant de 23 ans, j'entame ma 1ère année de Master informatique option Bases de données et IA
+                        Etudiant de 24 ans, j'entame ma 2nde année de Master informatique option Bases de données et IA
                         à l'université de Bourgogne. Passionné par l'informatique depuis plus d'une dizaine d'année et
-                        plus particulière par le développement Backend, j'exerce maintenant dans l'équipe Agri-Agro au
-                        sein d'Atol CD en tant que développeur Full-Stack sur les projets MesParcelles,
+                        plus particulièrement par le développement Backend, j'exerce maintenant dans l'équipe Agri-Agro
+                        au sein d'Atol CD en tant que développeur Full-Stack sur les projets MesParcelles,
                         MesCertifications et MonSimulateurPac. Vous trouverez ci-dessous mon CV et mes projets plus en
                         détails. Vous pourrez également trouver des article plus détaillés dans l'onglet "Articles".
                     </div>
