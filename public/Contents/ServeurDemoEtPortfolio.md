@@ -22,8 +22,7 @@ Docker.
 ### Monitoring
 
 Pour la partie monitoring du serveur, un conteneur Prometheus est déployé ainsi qu'un Node Exporter. Un conteneur
-Grafana est également déployé pour visualiser les métriques collectées par Prometheus (Voir
-la [page publique](https://monitoring.yaon.fr) de monitoring).
+Grafana est également déployé pour visualiser les métriques collectées par Prometheus.
 
 Les dossiers `/host/proc` et `/host/sys` sont montés dans le conteneur du Node Exporter pour collecter les métriques.
 Ces dernières sont ensuite exposées via le port 9100 afin d'être collectées par Prometheus.

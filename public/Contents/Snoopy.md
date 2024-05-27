@@ -7,9 +7,6 @@ peuvent également être envoyés depuis l'application par mail au client.
 Une interface d'administration permet de gérer les utilisateurs, les clients, les interventions et les paramètres de
 l'application.
 
-Vous pourrez trouver une version de démonstration de l'application sur [snoopy.yaon.fr](https://snoopy.yaon.fr). Les
-identifiants pour se connecter sont `admin` et `admin`. La base de données est réinitialisée toutes les nuits.
-
 ***
 
 ### Stack technique
