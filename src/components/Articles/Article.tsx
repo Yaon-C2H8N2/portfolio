@@ -1,8 +1,9 @@
 import Markdown from "react-markdown";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import {githubGist} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import {githubGist, tomorrowNightEighties} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import {ThemeContext} from "@/components/Context/Theme.tsx";
 
 function Article() {
     const [content, setContent] = useState("");
@@ -36,6 +37,8 @@ function Article() {
                             // @ts-expect-error je vais me coller une balle jpp
                             const match = /language-(\w+\+*)/.exec(props.children.props.className || '')
 
+                            const {theme} = useContext(ThemeContext);
+
                             // return (
                             //     <div className={"overflow-y-auto"}>
                             //         <pre
@@ -43,8 +46,8 @@ function Article() {
                             //     </div>
                             // )
                             return (
-                                <div className={"overflow-y-auto border-gray-200 border-4 pl-3 rounded-lg bg-gray-200"}>
-                                    <SyntaxHighlighter customStyle={{backgroundColor: "rgb(229 231 235)"}} language={match ? match[1] : 'text'} style={githubGist}>
+                                <div className={"overflow-y-auto border-gray-200 dark:border-neutral-700 dark:bg-neutral-700 border-4 pl-3 rounded-lg bg-gray-200"}>
+                                    <SyntaxHighlighter customStyle={{backgroundColor: theme === "dark" ? "rgb(64 64 64)" : "rgb(229 231 235)"}} language={match ? match[1] : 'text'} style={theme === "dark" ? tomorrowNightEighties : githubGist}>
                                         {// @ts-expect-error je vais me coller une balle jpp
                                             (props.children).props.children as string}
                                     </SyntaxHighlighter>
@@ -52,7 +55,7 @@ function Article() {
                             )
                         },
                         code(props) {
-                            return <code className={"bg-gray-200 border-4 rounded-lg"}>{props.children}</code>
+                            return <code className={"bg-gray-200 dark:bg-neutral-600 border-4 rounded-lg"}>{props.children}</code>
                         },
                         ul(props) {
                             return <ul className={"list-disc ml-8"}>{props.children}</ul>
