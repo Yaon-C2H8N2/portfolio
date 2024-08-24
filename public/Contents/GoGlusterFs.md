@@ -29,8 +29,7 @@ d'exposer les fonctionnalités de `gluster` via une API. Ce wrapper sera divisé
 
 Ce wrapper sera développé en Go, il s'agit ici d'un choix personnel afin de me former sur ce langage.
 
-Enfin, l'interface web sera développée avec Svelte avec Vite. Encore une fois, ce choix n'a pas d'importance, il s'agit
-à nouveau d'un choix dans le but de me familiariser avec cet outil.
+Enfin, l'interface web sera développée avec React. Encore une fois, ce choix n'a pas d'importance.
 
 Afin de simplifier le déploiement de l'application (et le développement), l'ensemble des services seront déployés dans
 des conteneurs Docker sur chaque noeud avec Docker Swarm. Ainsi chaque noeud du cluster sera capable de déployer
@@ -98,9 +97,9 @@ Le wrapper permet de gérer les bricks, les volumes et les peers du cluster. Voi
 package main
 
 import (
-	"go-glusterfs.yaon.fr/pkg/brick"
-	"go-glusterfs.yaon.fr/pkg/peer"
-	"go-glusterfs.yaon.fr/pkg/volume"
+	"github.com/Yaon-C2H8N2/go-glusterfs/pkg/brick"
+	"github.com/Yaon-C2H8N2/go-glusterfs/pkg/peer"
+	"github.com/Yaon-C2H8N2/go-glusterfs/pkg/volume"
 )
 
 func main() {

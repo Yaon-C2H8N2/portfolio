@@ -46,5 +46,11 @@
     "description": "Présentation de GlusterFS et du projet de mise en place d'un stockage distribué avec une WebUi custom.",
     "date": "2024-05-27",
     "filename": "GoGlusterFs.md"
+  },
+  {
+    "title": "Stockage distribué avec GlusterFS : Chapitre 2",
+    "description": "Création de l'API REST et de la WebUi pour la gestion de GlusterFS.",
+    "date": "2024-08-24",
+    "filename": "GoGlusterFs2.md"
   }
 ]
