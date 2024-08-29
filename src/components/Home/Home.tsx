@@ -24,7 +24,7 @@ function Home() {
             entreprise: "Atol Conseils et Développements",
             poste: "Développeur Full Stack",
             periode: "2023 - En cours",
-            tags: ["Java", "React", "PostgreSQL"],
+            tags: ["Java", "React/React Native", "PostgreSQL", "PHP", "Docker"],
             description: "Développement d'applications web et mobiles au sein de l'équipe Agri-Agro. Contrat d'alternance pendant ma formation en Master BDIA à l'université de Bourgogne."
         }
     ];
@@ -49,13 +49,20 @@ function Home() {
 
     const competences: string[] = [
         "Java (Spring Boot/JAX-RS)", "C++ (Qt)", "React/React Native", "PHP", "PostgreSQL", "JasperReports", "Calculs distribués",
-        "Bases de données réparties", "Docker", "Git"
+        "Bases de données réparties", "Docker", "Docker Swarm", "Git", "ActiveMQ", "Kafka", "GlusterFS", "Ceph"
     ];
 
     const projets: Projet[] = [
         {
+            nom: "glusterfs-webui",
+            periode: "05/2024 - 08/2024",
+            tags: ["React", "Go", "GlusterFS", "CI/CD", "Docker"],
+            description: "Interface web en React et API en Go pour administrer un cluster GlusterFS. Déployé avec Docker Swarm. Réalisé en lien avec go-glusterfs.",
+            lien: "https://github.com/Yaon-C2H8N2/glusterfs-webui"
+        },
+        {
             nom: "go-glusterfs",
-            periode: "05/2024 - 06/2024",
+            periode: "05/2024 - 08/2024",
             tags: ["Go", "GlusterFS", "Wrapper", "CI/CD", "Docker"],
             description: "Wrapper en Go pour GlusterFS. Tests unitaires et CI/CD avec Docker pour simuler un cluster de test. Réalisé en lien avec glusterfs-webui.",
             lien: "https://github.com/Yaon-C2H8N2/go-glusterfs"
@@ -118,12 +125,12 @@ function Home() {
                 <div>
                     <h2 className={"text-3xl font-bold mb-2"}>À propos</h2>
                     <div className={"text-justify"}>
-                        Etudiant de 24 ans, j'entame ma 2nde année de Master informatique option Bases de données et IA
-                        à l'université de Bourgogne. Passionné par l'informatique depuis plus d'une dizaine d'année et
+                        Étudiant de 24 ans, j'entame ma 2nde année de Master informatique option Bases de données et IA
+                        à l'université de Bourgogne. Passionné par l'informatique depuis plus d'une dizaine d'années et
                         plus particulièrement par le développement Backend, j'exerce maintenant dans l'équipe Agri-Agro
                         au sein d'Atol CD en tant que développeur Full-Stack sur les projets MesParcelles,
                         MesCertifications et MonSimulateurPac. Vous trouverez ci-dessous mon CV et mes projets plus en
-                        détails. Vous pourrez également trouver des article plus détaillés dans l'onglet "Articles".
+                        détails. Vous pourrez également trouver des articles plus détaillés dans l'onglet "Articles".
                     </div>
                 </div>
                 <div>
